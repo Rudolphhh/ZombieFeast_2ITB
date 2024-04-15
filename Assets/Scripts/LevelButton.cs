@@ -25,6 +25,7 @@ public class LevelButton : MonoBehaviour
         bestTime.text = "Best Time\n" + (PlayerPrefs.HasKey(name) ? PlayerPrefs.GetFloat(name).ToString() : "N/A");
         var btn = GetComponent<Button>();
         btn.onClick.AddListener(LoadLevel);
+        Time.timeScale = 1;
     }
 
     private void LoadLevel()
